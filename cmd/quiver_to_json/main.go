@@ -17,7 +17,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/hartho/quiver"
+	"github.com/harrtho/quiver"
 )
 
 // Tells the tool to also load the resources.
