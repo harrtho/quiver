@@ -1,4 +1,4 @@
-module github.com/ushu/quiver
+module github.com/harrtho/quiver
 
 go 1.17
 

@@ -16,7 +16,7 @@ and is visible on the web.
 ### Installing
 
 ```sh
-$ go get -u github.com/ushu/quiver/cmd/quiver_to_markdown
+$ go get -u github.com/harrtho/quiver/cmd/quiver_to_markdown
 ```
 
 #### `go` dependency

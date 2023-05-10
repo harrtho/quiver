@@ -4,7 +4,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ushu/quiver"
+	"github.com/harrtho/quiver"
 )
 
 func TestLoadLibrary(t *testing.T) {

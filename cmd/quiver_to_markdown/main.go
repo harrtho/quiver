@@ -20,8 +20,8 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/harrtho/quiver"
 	"github.com/pkg/errors"
-	"github.com/ushu/quiver"
 )
 
 // PathElementReplacer

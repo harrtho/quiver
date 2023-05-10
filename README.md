@@ -13,14 +13,14 @@ Tested with **Go 1.8**, but it should work on most setups.
 ### Installing
 
 ```
-$ go get github.com/ushu/quiver
+$ go get github.com/harrtho/quiver
 ```
 
 ### Usage
 
 ```go
 import (
-    "github.com/ushu/quiver"
+    "github.com/harrtho/quiver"
 )
 ```
 
@@ -56,8 +56,8 @@ This library comes with two binaries:
 You can install then right away with the `go` tool:
 
 ```sh
-$ go install github.com/ushu/quiver/cmd/quiver_to_markdown
-$ go install github.com/ushu/quiver/cmd/quiver_to_json
+$ go install github.com/harrtho/quiver/cmd/quiver_to_markdown
+$ go install github.com/harrtho/quiver/cmd/quiver_to_json
 ```
 
 ## Version & Contributing
