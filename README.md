@@ -60,9 +60,7 @@ $ go install github.com/harrtho/quiver/cmd/quiver_to_markdown
 $ go install github.com/harrtho/quiver/cmd/quiver_to_json
 ```
 
-## Version & Contributing
-
-This is **v0.3.3** of the tool, and is an **early release** by all standards.
+## Contributing
 
 Feel free to contribute anytime !
 
