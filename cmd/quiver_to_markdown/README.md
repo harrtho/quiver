@@ -41,7 +41,6 @@ export PATH="$PATH:$GOPATH/bin"
 
 (see the [go docs](https://golang.org/doc/code.html#GOPATH) for more details)
 
-
 ### Usage
 
 ```sh
@@ -60,9 +59,8 @@ This project is licensed under the MIT License - see the [LICENSE](../../LICENSE
 
 ## TODO
 
-* [x] Add support for note links
-* [ ] Allow to convert back saved notes to [Quiver]
+- [x] Add support for note links
+- [ ] Allow to convert back saved notes to [Quiver]
 
 [Quiver]: https://itunes.apple.com/app/id866773894
 [Homebrew]: https://brew.io
-

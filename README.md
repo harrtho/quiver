@@ -35,11 +35,11 @@ for _, notebook := range lib.Notebooks {
     for _, note := notebook.Notes {
         // Print the title of the note
         fmt.Println(note.Title)
-        
+
         for _, cell := note.cells {
             // Print the type of cell
             fmt.Println(note.Title)
-            
+
             // ...
         }
     }
@@ -50,8 +50,8 @@ for _, notebook := range lib.Notebooks {
 
 This library comes with two binaries:
 
-* `cmd/quiver_to_json` is a small tool that allows loading a full library into a single JSON file
-* `cmd/quiver_to_markdown` is a small tool output all the notes as a tree of Markdown files
+- `cmd/quiver_to_json` is a small tool that allows loading a full library into a single JSON file
+- `cmd/quiver_to_markdown` is a small tool output all the notes as a tree of Markdown files
 
 You can install then right away with the `go` tool:
 
@@ -72,8 +72,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## TODO
 
-* [ ] Add support for creating a valid Quiver Library from code (this version is mostly for reading)
-* [ ] Add some tests
+- [ ] Add support for creating a valid Quiver Library from code (this version is mostly for reading)
+- [ ] Add some tests
 
 [Quiver]: https://itunes.apple.com/app/id866773894
 [Quiver format docs]: https://github.com/HappenApps/Quiver/wiki/Quiver-Data-Format
