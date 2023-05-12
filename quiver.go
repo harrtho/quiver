@@ -153,7 +153,7 @@ func (u *NoteResource) UnmarshalJSON(data []byte) error {
 		Name string
 		URL  string
 	}
-	err := json.Unmarshal(data, aux)
+	err := json.Unmarshal(data, &aux)
 	if err != nil {
 		return err
 	}
