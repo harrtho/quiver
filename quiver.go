@@ -103,7 +103,7 @@ func (u *TimeStamp) MarshalJSON() ([]byte, error) {
 	return json.Marshal(secs)
 }
 
-// MarshalJSON unmarshals TimeStamp from an integer (seconds since Epoch).
+// UnmarshalJSON unmarshals TimeStamp from an integer (seconds since Epoch).
 func (u *TimeStamp) UnmarshalJSON(data []byte) error {
 	var secs int64
 	err := json.Unmarshal(data, &secs)

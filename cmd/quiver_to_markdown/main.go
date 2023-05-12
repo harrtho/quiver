@@ -26,8 +26,8 @@ import (
 
 // PathElementReplacer
 //
-// Theorically, all characters are acceptable (https://en.wikipedia.org/wiki/HFS_Plus) in path elements,
-// in practise they can cause strange issues in Finder...
+// Theoretically, all characters are acceptable (https://en.wikipedia.org/wiki/HFS_Plus) in path elements,
+// in practice they can cause strange issues in Finder...
 var PathElementReplacer = strings.NewReplacer(
 	"/", "|",
 	":", "-",
