@@ -157,7 +157,7 @@ func writeNote(p string, note *quiver.Note, index NotesIndex) error {
 	// has resources ?
 	if len(note.Resources) > 0 {
 		for _, r := range note.Resources {
-			rp := filepath.Join(path.Dir(p), "_resources", r.Rel)
+			rp := filepath.Join(path.Dir(p), "resources", r.Rel)
 			err = EnsureDirectory(rp)
 			if err != nil {
 				return err
@@ -194,7 +194,7 @@ func writeNoteMarkdown(p string, note *quiver.Note, index NotesIndex) error {
 
 		// content to write: we replace all the data links to relative links
 		data := string(c.Data)
-		data = strings.Replace(data, "quiver-image-url/", "_resources/", -1)
+		data = strings.Replace(data, "quiver-image-url/", "resources/", -1)
 
 		if index != nil {
 			data = noteURLRegexp.ReplaceAllStringFunc(data, func(m string) string {
