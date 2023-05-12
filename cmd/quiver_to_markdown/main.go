@@ -213,9 +213,9 @@ func writeNoteMarkdown(p string, note *quiver.Note, index NotesIndex) error {
 			if eq, ok := languageEquivalents[l]; ok {
 				l = eq
 			}
-			_, err = fmt.Fprintf(out, "```%v\n%v\n```", l, data)
+			_, err = fmt.Fprintf(out, "```%v\n%v\n```\n", l, data)
 		case c.IsLatex():
-			_, err = fmt.Fprintf(out, "```latex\n%v\n```", data)
+			_, err = fmt.Fprintf(out, "```latex\n%v\n```\n", data)
 		case c.IsMarkdown():
 			_, err = fmt.Fprintln(out, data)
 		case c.IsText():
@@ -225,7 +225,7 @@ func writeNoteMarkdown(p string, note *quiver.Note, index NotesIndex) error {
 			if c.DiagramType == "flow" {
 				tool = "Flowchart diagram, see http://flowchart.js.org"
 			}
-			_, err = fmt.Fprintf(out, "```javascript\n// %v\n%v\n```", tool, data)
+			_, err = fmt.Fprintf(out, "```javascript\n// %v\n%v\n```\n", tool, data)
 		}
 		if err != nil {
 			return err
