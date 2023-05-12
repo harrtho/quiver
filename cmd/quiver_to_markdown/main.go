@@ -20,6 +20,7 @@ import (
 	"regexp"
 	"strings"
 
+	md "github.com/JohannesKaufmann/html-to-markdown"
 	"github.com/harrtho/quiver"
 	"github.com/pkg/errors"
 )
@@ -195,6 +196,7 @@ func writeNoteMarkdown(p string, note *quiver.Note, index NotesIndex) error {
 		// content to write: we replace all the data links to relative links
 		data := string(c.Data)
 		data = strings.Replace(data, "quiver-image-url/", "resources/", -1)
+		data = strings.Replace(data, "quiver-file-url/", "file:///resources/", -1)
 
 		if index != nil {
 			data = noteURLRegexp.ReplaceAllStringFunc(data, func(m string) string {
@@ -219,7 +221,12 @@ func writeNoteMarkdown(p string, note *quiver.Note, index NotesIndex) error {
 		case c.IsMarkdown():
 			_, err = fmt.Fprintln(out, data)
 		case c.IsText():
-			_, err = fmt.Fprintln(out, data)
+			converter := md.NewConverter("", true, nil)
+			markdown, err := converter.ConvertString(data)
+			if err != nil {
+				return err
+			}
+			_, err = fmt.Fprintln(out, markdown)
 		case c.IsDiagram():
 			tool := "Sequence diagram, see https://bramp.github.io/js-sequence-diagrams"
 			if c.DiagramType == "flow" {
